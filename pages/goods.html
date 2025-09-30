@@ -1,39 +1,53 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Товары</title>
-        <link rel="stylesheet" href="style/styles.css">
-    </head>
-    <body>
-        <header>
-            <div id="content">Хэдер</div>
-            <div id="menu">
-                <ul>
-                    <li><a href="../index.html">Главная</a></li>
-                    <li><a href="/pages/news.html">Новости</a></li>
-                    <li><a href="/pages/practices.html">Практики</a></li>
-                    <li><a href="/pages/goods.html">Товары</a></li>
-                    <li><a href="/pages/contacts.html">Контакты</a></li>
-                </ul>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Товары</title>
+    <link rel="stylesheet" href="/style/style.css">
+</head>
+<body>
+    <div class="page-container">
+        <div class="header">Товары</div>
+        <div class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
+                <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
+                <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
+                <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1 class="section-title">Наши товары</h1>
+            
+            <div class="products-container">
+                <div class="product-card">
+                    <img src="/img/Ak 103.jpg" alt="Товар 1" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Ak-103</h3>
+                        <p class="product-price">50.000 руб.</p>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <img src="/img/Ak-47.jpg" alt="Товар 2" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Ak-47</h3>
+                        <p class="product-price">45.000 руб.</p>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <img src="/img/M4A1.jpg" alt="Товар 3" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">M4A1</h3>
+                        <p class="product-price">35.000 руб.</p>
+                    </div>
+                </div>
             </div>
-            <div>
-                <img src="/img/M4A1.jpg" alt="Фото M4A1" width="200" height="250">
-                <h1>M4A1</h1>
-                <p>Цена: 30.000</p>
-
-                <img src="/img/Ak 103.jpg" alt="Фото Ak 103" width="200" height="250">
-                <h1>Ak-103</h1>
-                <p>Цена: 50.000</p>
-
-                <img src="/img/Ak-47.jpg" alt="Фото M4A1" width="200" height="250">
-                <h1>Ak-47</h1>
-                <p>Цена: 99.000</p>
-            </div>
-
-            <div id="footer">Футер</div>
-        </header>
-        
-    </body>
+        </div>
+        <div class="footer">© 2025 Портфолио. Все права защищены.</div>
+    </div>
+</body>
 </html>

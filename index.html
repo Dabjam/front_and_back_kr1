@@ -1,53 +1,61 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Любимая страница</title>
-        <link rel="stylesheet" href="style/styles.css">
-    </head>
-    <body>
-        <header>
-            <div id="header">Хэдер</div>
-            <div id="menu">
-                <ul>
-                    <li><a href="../index.html">Главная</a></li>
-                    <li><a href="pages/news.html">Новости</a></li>
-                    <li><a href="pages/practices.html">Практики</a></li>
-                    <li><a href="pages/goods.html">Товары</a></li>
-                    <li><a href="pages/contacts.html">Контакты</a></li>
-                </ul>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Семестровая работа</title>
+    <link rel="stylesheet" href="/style/style.css">
+</head>
+<body>
+    <div class="page-container">
+        <div class="header">
+            <b>Портфолио</b>
+        </div>
+        <div class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                <li class="nav-item"><a class="nav-link" href="pages/news.html">Новости</a></li>
+                <li class="nav-item"><a class="nav-link" href="pages/practices.html">Практики</a></li>
+                <li class="nav-item"><a class="nav-link" href="pages/goods.html">Товары</a></li>
+                <li class="nav-item"><a class="nav-link" href="pages/contacts.html">Контакты</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="profile-header">
+                <h1 class="profile-title">Информация об авторе</h1>
+                <img class="profile-photo" src="/img/photo.png" alt="Фотография">
+                <h2 class="profile-name">Коржов Сергей Сергеевич</h2>
+                <p class="profile-group"><ins>ЭФБО-13-24</ins></p>
             </div>
-            <div id="content">
-                <p>Информация об авторе</p>
-                <img src="img/photo.png" alt="Фото автора" width="200" height="250">
-                <h1>Поздышев Эдуард Павлович</h1>
-                <h2>ЭФБО-13-24</h2>
-                <p>Обо мне: Я родился в Иркутске в 2006 году. Глупость рано
-                ударила в голову. В четыре активно ругался.
-                Потом школа, форма, драки, клей. Так я становился сильней. Воровал деньги в раздевалке.
-                </p>
-                <div>Навык 1</div>
-                <div>Навык 2</div>
-                <div>Навык 3</div>
-                <div>Навык 4</div>
-                <div>
-                    Мой опыт работы:
-                    <div>
-                        Опыт 1 <br>
-                        Работал в найм на мафиозника.
-                    </div>
-                    <div>
-                        Опыт 2 <br>
-                        Работал в баре одноглазого джо.
-                    </div>
-                    <div>
-                        Опыт 3 <br>
-                        Работал на фсб
-                    </div>
+            
+            <div class="about-me">
+                <p>Обо мне: Я родился в Иркутске в 70-м. Глупость рано ударила в голову. В четыре активно ругался. Потом школа, деньги, драки, клей. Так я становился сильней. Воровал деньги в раздевалке.</p>
+            </div>
+            
+            <div class="skills-container">
+                <div class="skill-tag">HTML</div>
+                <div class="skill-tag">CSS</div>
+                <div class="skill-tag">JavaScript</div>
+                <div class="skill-tag">Git</div>
+            </div>
+            
+            <div class="experience-section">
+                <h2 class="section-title">Мой опыт работы</h2>
+                <div class="experience-card">
+                    <h3 class="experience-title">Такист</h3>
+                    <p class="experience-desc">Таксовал для души, а так у меня свой бизнес</p>
+                </div>
+                <div class="experience-card">
+                    <h3 class="experience-title">Ворюга</h3>
+                    <p class="experience-desc">Воровал продавал и буду воровать</p>
+                </div>
+                <div class="experience-card">
+                    <h3 class="experience-title">Вайнером</h3>
+                    <p class="experience-desc">Снимал вайны</p>
                 </div>
             </div>
-            <div id="footer">Футер</div>
-        </header>
-    </body>
+        </div>
+        <div class="footer">© 2025 Портфолио. Все права защищены.</div>
+    </div>
+</body>
 </html>

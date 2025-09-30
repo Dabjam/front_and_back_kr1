@@ -1,41 +1,45 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Новости</title>
-        <link rel="stylesheet" href="style/styles.css">
-    </head>
-    <body>
-        <header>
-            <div id="header">Хэдер</div>
-            <div id="menu">
-                <ul>
-                    <li><a href="../index.html">Главная</a></li>
-                    <li><a href="/pages/news.html">Новости</a></li>
-                    <li><a href="/pages/practices.html">Практики</a></li>
-                    <li><a href="/pages/goods.html">Товары</a></li>
-                    <li><a href="/pages/contacts.html">Контакты</a></li>
-                </ul>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости</title>
+    <link rel="stylesheet" href="/style/style.css">
+</head>
+<body>
+    <div class="page-container">
+        <div class="header">Новости</div>
+        <div class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
+                <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
+                <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
+                <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1 class="section-title">Последние новости</h1>
+            
+            <div class="news-item">
+                <h2>Запуск курса по мобильной разработке</h2>
+                <p class="news-date">05.01.2025 09:00 | Автор: Смирнова А.В.</p>
+                <p>Рады анонсировать старт нового курса по разработке мобильных приложений! Курс охватывает разработку под iOS и Android с использованием современных фреймворков и включает реальные проекты.</p>
             </div>
-            <div id="content">
-                <div>
-                    <h1>Новость 1</h1>
-                    <h3>dada</h3>
-                    <p>коара дада</p>
-                </div>
-                <div>
-                    <h1>Новость 2</h1>
-                    <h3>adada</h3>
-                    <p>ну да так было</p>
-                </div>
-                <div>
-                    <h1>Новость 3</h1>
-                    <h3>dada</h3>
-                    <p>вфввфвф</p>
-                </div>
+            
+            <div class="news-item">
+                <h2>Обновление библиотеки учебных материалов</h2>
+                <p class="news-date">06.01.2025 11:20 | Автор: Иванов И.И.</p>
+                <p>Библиотека учебных материалов пополнена новыми примерами кода и актуальными гайдами по последним версиям инструментов разработки.</p>
             </div>
-            <div id="footer">Футер</div>
-        </header>
-    </body>
+            
+            <div class="news-item">
+                <h2>Вебинар по основам JavaScript</h2>
+                <p class="news-date">07.01.2025 15:00 | Автор: Петров П.П.</p>
+                <p>Присоединяйтесь к нашему бесплатному вебинару по основам JavaScript, который пройдет 15 января 2025 года. Узнайте, как создавать интерактивные веб-приложения!</p>
+            </div>
+        </div>
+        <div class="footer">© 2025 Портфолио. Все права защищены.</div>
+    </div>
+</body>
 </html>

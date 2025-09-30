@@ -1,29 +1,36 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Контакты</title>
-        <link rel="stylesheet" href="style/styles.css">
-    </head>
-    <body>
-        <header>
-            <div id="content">Хэдер</div>
-            <div id="menu">
-                <ul>
-                    <li><a href="../index.html">Главная</a></li>
-                    <li><a href="/pages/news.html">Новости</a></li>
-                    <li><a href="/pages/practices.html">Практики</a></li>
-                    <li><a href="/pages/goods.html">Товары</a></li>
-                    <li><a href="/pages/contacts.html">Контакты</a></li>
-                </ul>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
+    <link rel="stylesheet" href="/style/style.css">
+</head>
+<body>
+    <div class="page-container">
+        <div class="header">Контакты</div>
+        <div class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
+                <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
+                <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
+                <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1 class="section-title">Контакты</h1>
+            
+            <div class="contacts-container">
+                <div class="contact-info">
+                    <p><b>Адрес электронной почты:</b> pozdyhev1eduard@mail.ru</p>
+                    <p><b>Адрес:</b> г. Москва, ул. Тура, д. 5</p>
+                </div>
+                
+                <button class="contact-button" onclick="alert('Позвоните на номер: +7 (999) 999-99-99')"><b>Позвоните мне</b></button>
             </div>
-            <div>
-                <p>Адрес элктронной почты: pozdysheveuard@gmail.com</p>
-                <p>Адрес: г. Москва, пр-кт Вернадского-78 </p>
-                <button id="call_me">Повзоните мне</button>
-            </div>
-            <div id="footer">Футер</div>
-        </header>
-    </body>
+        </div>
+        <div class="footer">© 2025 Портфолио. Все права защищены.</div>
+    </div>
+</body>
 </html>
