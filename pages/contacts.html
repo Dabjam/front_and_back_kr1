@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контакты</title>
-    <link rel="stylesheet" href="../src/style.css">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/modal_window.css">
 </head>
+
 <body>
     <div class="page-container">
         <div class="header">Контакты</div>
@@ -20,17 +23,67 @@
         </nav>
         <main class="content">
             <h1 class="section-title">Контакты</h1>
-            
+
             <div class="contacts-container">
                 <div class="contact-info">
                     <p><b>Адрес электронной почты:</b> pozdyhev1eduard@mail.ru</p>
                     <p><b>Адрес:</b> г. Москва, ул. Тура, д. 5</p>
                 </div>
-                
-                <button class="contact-button" onclick="alert('Позвоните на номер: +7 (999) 999-99-99')"><b>Позвоните мне</b></button>
+
+                <button class="contact-button" onclick="contactModal.showModal()">Связаться с нами</button>
             </div>
         </main>
-        <div class="footer">© 2025 Портфолио. Все права защищены.</div>
+        <footer>
+            <div class="footer">© 2025 Портфолио. Все права защищены.</div>
+        </footer>
     </div>
+    <dialog id="contactModal">
+        <div class="modal-header">
+            <h2>Форма обратной связи</h2>
+        </div>
+        <div class="modal-content">
+            <form id="feedbackForm" method="dialog">
+                <div class="form-group">
+                    <label for="name">Имя <span class="required">*</span>
+                    </label>
+                    <input type="text" id="name" name="name" required placeholder="Введите ваше имя">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Телефон <span class="required">*
+                        </span></label>
+                    <input type="tel" id="phone" name="phone" required placeholder="+7 (XXX) XXX-XX-XX">
+                </div>
+                <div class="form-group">
+                    <label for="email">Электронная почта <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required placeholder="example@mail.ru">
+                </div>
+                <div class="form-group">
+                    <label for="category">Категория обращения <span class="required">*</span></label>
+                    <select id="category" name="category" required>
+                        <option value="">Выберите категорию</option>
+                        <option value="technical">Техническая
+                            поддержка</option>
+                        <option value="commercial">Коммерческое
+                            предложение</option>
+                        <option value="cooperation">Сотрудничество</option>
+                        <option value="complaint">Жалоба</option>
+                        <option value="suggestion">Предложение</option>
+                        <option value="other">Другое</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Текст обращения <span class="required">*</span></label>
+                    <textarea id="message" name="message" required
+                        placeholder="Опишите вашу проблему или вопрос..."></textarea>
+                </div>
+                <div class="modal-actions">
+                    <button type="submit" class="btn btnsecondary">Отмена</button>
+                    <button type="button" class="btn btn-primary" onclick="submitForm()">Отправить</button>
+                </div>
+            </form>
+        </div>
+    </dialog>
+    <script src="/src/script.js"></script>
 </body>
+
 </html>
