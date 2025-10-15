@@ -9,63 +9,60 @@
 </head>
 
 <body>
-    <div class="page-container">
+    <div class="page">
         <div class="header">
             <b>Портфолио</b>
         </div>
-        <nav class="nav">
-            <ul class="nav-list">
-                <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
-                <li class="nav-item"><a class="nav-link" href="pages/news.html">Новости</a></li>
-                <li class="nav-item"><a class="nav-link" href="pages/practices.html">Практики</a></li>
-                <li class="nav-item"><a class="nav-link" href="pages/goods.html">Товары</a></li>
-                <li class="nav-item"><a class="nav-link" href="pages/contacts.html">Контакты</a></li>
+        <nav class="menu">
+            <ul class="menu__list">
+                <li class="menu__item"><a class="menu__link menu__link--active" href="index.html">Главная</a></li>
+                <li class="menu__item"><a class="menu__link" href="pages/news.html">Новости</a></li>
+                <li class="menu__item"><a class="menu__link" href="pages/practices.html">Практики</a></li>
+                <li class="menu__item"><a class="menu__link" href="pages/goods.html">Товары</a></li>
+                <li class="menu__item"><a class="menu__link" href="pages/contacts.html">Контакты</a></li>
             </ul>
         </nav>
         <main class="content">
-            <div class="profile-header">
-                <h1 class="profile-title">Информация об авторе</h1>
-                <img class="profile-photo" src="./img/photo.png" alt="Фотография">
-                <h2 class="profile-name">Поздышев Эдуард Павлович</h2>
-                <p class="profile-group"><ins>ЭФБО-13-24</ins></p>
+            <div class="profile">
+                <h1 class="profile__title">Информация об авторе</h1>
+                <img class="profile__photo" src="./img/photo.png" alt="Фотография">
+                <h2 class="profile__name">Поздышев Эдуард Павлович</h2>
+                <p class="profile__group"><ins>ЭФБО-13-24</ins></p>
             </div>
 
-            <div class="about-me">
+            <div class="about">
                 <p>Обо мне: Я родился в Иркутске в 70-м. Глупость рано ударила в голову. В четыре активно ругался. Потом
                     школа, деньги, драки, клей. Так я становился сильней. Воровал деньги в раздевалке.</p>
             </div>
 
-            <div class="skills-container">
-                <div class="skill-tag">HTML</div>
-                <div class="skill-tag">CSS</div>
-                <div class="skill-tag">JavaScript</div>
-                <div class="skill-tag">Git</div>
+            <div class="skills">
+                <div class="skills__tag">HTML</div>
+                <div class="skills__tag">CSS</div>
+                <div class="skills__tag">JavaScript</div>
+                <div class="skills__tag">Git</div>
             </div>
 
             <div class="experience-section">
                 <h2 class="section-title">Мой опыт работы</h2>
                 <div class="experience-grid">
-                    <div class="experience-card">
-                        <h3 class="experience-title">Такист</h3>
-                        <p class="experience-desc">Таксовал для души, а так у меня свой бизнес</p>
+                    <div class="card">
+                        <h3 class="card__title">Такист</h3>
+                        <p class="card__desc">Таксовал для души, а так у меня свой бизнес</p>
                     </div>
-                    <div class="experience-card">
-                        <h3 class="experience-title">Ворюга</h3>
-                        <p class="experience-desc">Воровал продавал и буду воровать</p>
+                    <div class="card">
+                        <h3 class="card__title">Ворюга</h3>
+                        <p class="card__desc">Воровал продавал и буду воровать</p>
                     </div>
-                    <div class="experience-card">
-                        <h3 class="experience-title">Вайнером</h3>
-                        <p class="experience-desc">Снимал вайны</p>
+                    <div class="card">
+                        <h3 class="card__title">Вайнером</h3>
+                        <p class="card__desc">Снимал вайны</p>
                     </div>
                 </div>
-                
             </div>
         </main>
-        <footer>
-            <div class="footer">© 2025 Портфолио. Все права защищены.</div>
+        <footer class="footer">
+            © 2025 Портфолио. Все права защищены.
         </footer>
-
     </div>
 </body>
-
 </html>

@@ -7,40 +7,40 @@
     <link rel="stylesheet" href="../style/style.css">
 </head>
 <body>
-    <div class="page-container">
+    <div class="page">
         <div class="header">Новости</div>
-        <nav class="nav">
-            <ul class="nav-list">
-                <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
-                <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
-                <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
-                <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
-                <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+        <nav class="menu">
+            <ul class="menu__list">
+                <li class="menu__item"><a class="menu__link" href="../index.html">Главная</a></li>
+                <li class="menu__item"><a class="menu__link menu__link--active" href="news.html">Новости</a></li>
+                <li class="menu__item"><a class="menu__link" href="practices.html">Практики</a></li>
+                <li class="menu__item"><a class="menu__link" href="goods.html">Товары</a></li>
+                <li class="menu__item"><a class="menu__link" href="contacts.html">Контакты</a></li>
             </ul>
         </nav>
         <main class="content">
             <h1 class="section-title">Последние новости</h1>
-            <section class="news-container">
-                <div class="news-item">
-                <h2>Запуск курса по мобильной разработке</h2>
-                <p class="news-date">05.01.2025 09:00 | Автор: Смирнова А.В.</p>
-                <p>Рады анонсировать старт нового курса по разработке мобильных приложений! Курс охватывает разработку под iOS и Android с использованием современных фреймворков и включает реальные проекты.</p>
-            </div>
-            
-            <div class="news-item">
-                <h2>Обновление библиотеки учебных материалов</h2>
-                <p class="news-date">06.01.2025 11:20 | Автор: Иванов И.И.</p>
-                <p>Библиотека учебных материалов пополнена новыми примерами кода и актуальными гайдами по последним версиям инструментов разработки.</p>
-            </div>
-            
-            <div class="news-item">
-                <h2>Вебинар по основам JavaScript</h2>
-                <p class="news-date">07.01.2025 15:00 | Автор: Петров П.П.</p>
-                <p>Присоединяйтесь к нашему бесплатному вебинару по основам JavaScript, который пройдет 15 января 2025 года. Узнайте, как создавать интерактивные веб-приложения!</p>
-            </div>
+            <section class="news">
+                <div class="card card--news">
+                    <h2 class="card__title">Запуск курса по мобильной разработке</h2>
+                    <p class="news__date">05.01.2025 09:00 | Автор: Смирнова А.В.</p>
+                    <p class="card__desc">Рады анонсировать старт нового курса по разработке мобильных приложений! Курс охватывает разработку под iOS и Android с использованием современных фреймворков и включает реальные проекты.</p>
+                </div>
+                
+                <div class="card card--news">
+                    <h2 class="card__title">Обновление библиотеки учебных материалов</h2>
+                    <p class="news__date">06.01.2025 11:20 | Автор: Иванов И.И.</p>
+                    <p class="card__desc">Библиотека учебных материалов пополнена новыми примерами кода и актуальными гайдами по последним версиям инструментов разработки.</p>
+                </div>
+                
+                <div class="card card--news">
+                    <h2 class="card__title">Вебинар по основам JavaScript</h2>
+                    <p class="news__date">07.01.2025 15:00 | Автор: Петров П.П.</p>
+                    <p class="card__desc">Присоединяйтесь к нашему бесплатному вебинару по основам JavaScript, который пройдет 15 января 2025 года. Узнайте, как создавать интерактивные веб-приложения!</p>
+                </div>
             </section>
         </main>
-        <div class="footer">© 2025 Портфолио. Все права защищены.</div>
+        <footer class="footer">© 2025 Портфолио. Все права защищены.</footer>
     </div>
 </body>
 </html>
