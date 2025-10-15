@@ -6,9 +6,12 @@
     <title>Товары</title>
     <link rel="stylesheet" href="../style/style.css">
 </head>
-<body>
+<body data-theme="light">
     <div class="page">
-        <div class="header">Товары</div>
+        <div class="header">
+            Товары
+            <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+        </div>
         <nav class="menu">
             <ul class="menu__list">
                 <li class="menu__item"><a class="menu__link" href="../index.html">Главная</a></li>
@@ -22,28 +25,22 @@
             <h1 class="section-title">Наши товары</h1>
             
             <div class="products">
-                <div class="card card--product">
+                <div class="card card--product card--discount">
                     <img src="../img/Ak 103.jpg" alt="Товар 1" class="card__image">
-                    <div class="card__info">
-                        <h3 class="card__name">Ak-103</h3>
-                        <p class="card__price">50.000 руб.</p>
-                    </div>
+                    <h3 class="card__title">Ak-103</h3>
+                    <p class="card__price">50.000 руб.</p>
                 </div>
                 
                 <div class="card card--product">
                     <img src="../img/Ak-47.jpg" alt="Товар 2" class="card__image">
-                    <div class="card__info">
-                        <h3 class="card__name">Ak-47</h3>
-                        <p class="card__price">45.000 руб.</p>
-                    </div>
+                    <h3 class="card__title">Ak-47</h3>
+                    <p class="card__price">45.000 руб.</p>
                 </div>
                 
                 <div class="card card--product">
                     <img src="../img/M4A1.jpg" alt="Товар 3" class="card__image">
-                    <div class="card__info">
-                        <h3 class="card__name">M4A1</h3>
-                        <p class="card__price">35.000 руб.</p>
-                    </div>
+                    <h3 class="card__title">M4A1</h3>
+                    <p class="card__price">35.000 руб.</p>
                 </div>
             </div>
         </main>
@@ -51,5 +48,6 @@
             © 2025 Портфолио. Все права защищены.
         </footer>
     </div>
+    <script src="../src/script.js"></script>
 </body>
 </html>

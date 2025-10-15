@@ -8,9 +8,13 @@
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/modal_window.css">
 </head>
-<body>
+
+<body data-theme="light">
     <div class="page">
-        <div class="header">Контакты</div>
+        <div class="header">
+            Контакты
+            <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+        </div>
         <nav class="menu">
             <ul class="menu__list">
                 <li class="menu__item"><a class="menu__link" href="../index.html">Главная</a></li>
@@ -28,6 +32,7 @@
                     <p><b>Адрес электронной почты:</b> pozdyhev1eduard@mail.ru</p>
                     <p><b>Адрес:</b> г. Москва, ул. Тура, д. 5</p>
                 </div>
+
                 <button class="btn btn--contact" onclick="document.getElementById('contactModal').showModal()">Связаться с нами</button>
             </div>
         </main>
@@ -36,26 +41,26 @@
         </footer>
     </div>
     <dialog id="contactModal" class="modal">
-        <div class="modal__header">
+        <div class="modal-header">
             <h2>Форма обратной связи</h2>
         </div>
-        <div class="modal__content">
-            <form id="feedbackForm" method="dialog" class="form">
-                <div class="form__group">
-                    <label for="name" class="form__label">Имя <span class="form__required">*</span></label>
-                    <input type="text" id="name" name="name" required placeholder="Введите ваше имя" class="form__input">
+        <div class="modal-content">
+            <form id="feedbackForm" method="dialog">
+                <div class="form-group">
+                    <label for="name">Имя <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" required placeholder="Введите ваше имя">
                 </div>
-                <div class="form__group">
-                    <label for="phone" class="form__label">Телефон <span class="form__required">*</span></label>
-                    <input type="tel" id="phone" name="phone" required placeholder="+7 (XXX) XXX-XX-XX" class="form__input">
+                <div class="form-group">
+                    <label for="phone">Телефон <span class="required">*</span></label>
+                    <input type="tel" id="phone" name="phone" required placeholder="+7 (XXX) XXX-XX-XX">
                 </div>
-                <div class="form__group">
-                    <label for="email" class="form__label">Электронная почта <span class="form__required">*</span></label>
-                    <input type="email" id="email" name="email" required placeholder="example@mail.ru" class="form__input">
+                <div class="form-group">
+                    <label for="email">Электронная почта <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required placeholder="example@mail.ru">
                 </div>
-                <div class="form__group">
-                    <label for="category" class="form__label">Категория обращения <span class="form__required">*</span></label>
-                    <select id="category" name="category" required class="form__select">
+                <div class="form-group">
+                    <label for="category">Категория обращения <span class="required">*</span></label>
+                    <select id="category" name="category" required>
                         <option value="">Выберите категорию</option>
                         <option value="technical">Техническая поддержка</option>
                         <option value="commercial">Коммерческое предложение</option>
@@ -65,13 +70,13 @@
                         <option value="other">Другое</option>
                     </select>
                 </div>
-                <div class="form__group">
-                    <label for="message" class="form__label">Текст обращения <span class="form__required">*</span></label>
-                    <textarea id="message" name="message" required placeholder="Опишите вашу проблему или вопрос..." class="form__textarea"></textarea>
+                <div class="form-group">
+                    <label for="message">Текст обращения <span class="required">*</span></label>
+                    <textarea id="message" name="message" required placeholder="Опишите вашу проблему или вопрос..."></textarea>
                 </div>
-                <div class="modal__actions">
-                    <button type="button" class="btn btn--secondary" onclick="document.getElementById('contactModal').close()">Отмена</button>
-                    <button type="submit" class="btn btn--primary" onclick="submitForm()">Отправить</button>
+                <div class="modal-actions">
+                    <button type="button" onclick="document.getElementById('contactModal').close()">Отмена</button>
+                    <button type="button" onclick="submitForm()">Отправить</button>
                 </div>
             </form>
         </div>

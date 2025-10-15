@@ -1,4 +1,4 @@
-:root {
+:root, [data-theme="light"] {
     --gradient-page-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     --font-family-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --color-white: white;
@@ -18,11 +18,42 @@
     --border-radius-card: 12px;
     --transition-transform: transform 0.3s ease;
     --gradient-footer: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-    --grid-products-columns: repeat(3, 1fr);
+    --grid-products-columns: repeat(3, minmax(320px, 1fr)); /* 3 в ряд для товаров */
     --padding-btn: 0.75rem 1.5rem;
     --border-radius-btn: 6px;
     --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     --shadow-btn-primary-hover: 0 5px 15px rgba(102, 126, 234, 0.4);
+    --color-bg-page: white;
+    --color-text: #2c3e50;
+    --color-bg-card: #ffffff;
+    --color-border-card: #e9ecef;
+    --color-link: #ffffff;
+    --color-link-hover: rgba(255, 255, 255, 0.8);
+}
+
+[data-theme="dark"] {
+    --gradient-page-bg: linear-gradient(135deg, #121212 0%, #1e1e1e 100%);
+    --color-white: #e0e0e0;
+    --color-text-dark: #e0e0e0;
+    --gradient-header: linear-gradient(135deg, #1e1e1e 0%, #2c2c2c 100%);
+    --gradient-nav: #1e1e1e;
+    --border-color-primary: #5c6bc0;
+    --shadow-profile: 0 8px 25px rgba(0, 0, 0, 0.5);
+    --gradient-about: linear-gradient(135deg, #2c2c2c 0%, #3a3a3a 100%);
+    --gradient-skill: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    --shadow-card: 0 5px 20px rgba(0, 0, 0, 0.3);
+    --border-left-primary: 4px solid #5c6bc0;
+    --border-left-news: 4px solid #1e3c72;
+    --color-text-secondary: #b0b0b0;
+    --gradient-footer: linear-gradient(135deg, #1e1e1e 0%, #2c2c2c 100%);
+    --gradient-primary: linear-gradient(135deg, #5c6bc0 0%, #3f51b5 100%);
+    --color-bg-page: #121212;
+    --color-text: #e0e0e0;
+    --color-bg-card: #1e1e1e;
+    --color-border-card: #3a3a3a;
+    --color-link: #e0e0e0;
+    --color-link-hover: rgba(224, 224, 224, 0.8);
+    --shadow-btn-primary-hover: 0 5px 15px rgba(92, 107, 192, 0.4);
 }
 
 body {
@@ -31,12 +62,14 @@ body {
     padding: 0;
     background: var(--gradient-page-bg);
     min-height: 100vh;
+    color: var(--color-text);
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 .page {
     max-width: 1200px;
     margin: 0 auto;
-    background: var(--color-white);
+    background: var(--color-bg-page);
     min-height: 100vh;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
     display: grid;
@@ -57,6 +90,23 @@ body {
     font-weight: 300;
     letter-spacing: 2px;
     grid-area: header;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--color-white);
+    transition: var(--transition-all);
+}
+
+.theme-toggle:hover {
+    transform: scale(1.2);
 }
 
 .menu {
@@ -79,7 +129,7 @@ body {
 }
 
 .menu__link {
-    color: var(--color-white);
+    color: var(--color-link);
     text-decoration: none;
     padding: 12px 25px;
     border-radius: 25px;
@@ -90,6 +140,7 @@ body {
 .menu__link:hover {
     background: rgba(255, 255, 255, 0.1);
     transform: translateY(-2px);
+    color: var(--color-link-hover);
 }
 
 .menu__link--active {
@@ -114,6 +165,10 @@ body {
 .profile {
     text-align: center;
     margin-bottom: 40px;
+    background: var(--color-bg-card);
+    padding: 20px;
+    border-radius: var(--border-radius-card);
+    border: 1px solid var(--color-border-card);
 }
 
 .profile__title {
@@ -154,6 +209,7 @@ body {
     border-left: 5px solid var(--border-color-primary);
     font-size: 16px;
     line-height: 1.8;
+    color: var(--color-text);
 }
 
 .skills {
@@ -180,79 +236,110 @@ body {
     box-shadow: 0 6px 20px rgba(79, 172, 254, 0.4);
 }
 
+/* БЭМ-компонент карточки */
 .card {
-    background: var(--color-white);
-    padding: 25px;
-    margin: 20px 0;
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border-card);
     border-radius: var(--border-radius-card);
+    padding: 1rem;
     box-shadow: var(--shadow-card);
-    border-left: var(--border-left-primary);
-    transition: var(--transition-transform);
-}
-
-.card:hover {
-    transform: translateX(5px);
-}
-
-.card__title {
-    font-size: 20px;
-    color: var(--color-text-dark);
-    margin: 0 0 10px 0;
-    font-weight: 600;
-}
-
-.card__desc {
-    color: var(--color-text-secondary);
-    line-height: 1.6;
-    margin: 0;
-}
-
-.card--news {
-    border-left: var(--border-left-news);
-}
-
-.card--product {
-    border-radius: var(--border-radius-card);
-    overflow: hidden;
-    box-shadow: var(--shadow-card);
-    transition: var(--transition-transform);
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    border-left: none;
-}
-
-.card--product:hover {
-    transform: translateY(-5px);
+    transition: box-shadow 0.3s ease, transform 0.3s ease, border 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    color: var(--color-text);
+    margin-bottom: 30px;
 }
 
 .card__image {
     width: 100%;
-    height: 400px;
+    height: 200px;
+    border-radius: 4px;
     object-fit: cover;
+    margin-bottom: 0.5rem;
 }
 
-.card__info {
-    padding: 20px;
-}
-
-.card__name {
-    font-size: 18px;
+.card__title {
+    font-size: 1.2rem;
     color: var(--color-text-dark);
-    margin: 10px 0;
+    margin: 0.5rem 0;
+}
+
+.card__desc {
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+    margin: 0.5rem 0;
 }
 
 .card__price {
-    font-size: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
     color: var(--border-color-primary);
-    font-weight: 600;
+}
+
+/* Hover */
+.card:hover, .card--hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-4px);
+}
+
+/* Selected */
+.card--selected {
+    border: 2px solid #4caf50;
+    background: rgba(76, 175, 80, 0.1);
+}
+
+/* Discount */
+.card--discount {
+    position: relative;
+}
+
+.card--discount::after {
+    content: "Скидка!";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #f44336;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.card--discount .card__price {
+    text-decoration: line-through;
+    color: #f44336;
+}
+
+/* Для товаров: чуть больше */
+.card--product {
+    padding: 1.5rem;
+}
+
+.card--product .card__title {
+    font-size: 1.4rem;
+}
+
+.card--product .card__price {
+    font-size: 1.4rem;
+}
+
+.card--news {
+
 }
 
 .products {
     display: grid;
     grid-template-columns: var(--grid-products-columns);
-    gap: 25px;
+    gap: 40px;
     margin-top: 30px;
+    justify-content: center; /* Центрирование карточек товаров */
+}
+
+/* Для experience-grid на главной */
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Адаптивная */
+    gap: 20px;
 }
 
 .news {
@@ -270,11 +357,12 @@ body {
 }
 
 .contacts__info {
-    background: #f8f9fa;
+    background: var(--color-bg-card);
     padding: 25px;
     border-radius: var(--border-radius-card);
     margin: 20px 0;
     border-left: var(--border-left-primary);
+    color: var(--color-text);
 }
 
 .btn {
@@ -285,6 +373,26 @@ body {
     font-size: 1rem;
     transition: var(--transition-all);
     font-weight: 600;
+}
+
+.btn--primary {
+    background: var(--gradient-primary);
+    color: var(--color-white);
+}
+
+.btn--primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-btn-primary-hover);
+}
+
+.btn--secondary {
+    background: #f8f9fa;
+    color: var(--color-text-dark);
+    border: 2px solid #e9ecef;
+}
+
+.btn--secondary:hover {
+    background: #e9ecef;
 }
 
 .btn--contact {
@@ -325,7 +433,10 @@ body {
 
     .products {
         grid-template-columns: 1fr;
-        gap: 15px;
+        gap: 40px;
+    }
+
+    .experience-grid {
+        grid-template-columns: 1fr; 
     }
 }
-
