@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Товары</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body data-theme="light">
+    <div class="page">
+        <div class="header">
+            Товары
+            <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+        </div>
+        <nav class="menu">
+            <ul class="menu__list">
+                <li class="menu__item"><a class="menu__link" href="../index.html">Главная</a></li>
+                <li class="menu__item"><a class="menu__link" href="news.html">Новости</a></li>
+                <li class="menu__item"><a class="menu__link" href="practices.html">Практики</a></li>
+                <li class="menu__item"><a class="menu__link menu__link--active" href="goods.html">Товары</a></li>
+                <li class="menu__item"><a class="menu__link" href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+        <main class="content">
+            <h1 class="section-title">Наши товары</h1>
+            
+            <div class="products">
+                <div class="card card--product card--discount">
+                    <img src="../img/Ak 103.jpg" alt="Товар 1" class="card__image">
+                    <h3 class="card__title">Ak-103</h3>
+                    <p class="card__price">50.000 руб.</p>
+                </div>
+                
+                <div class="card card--product">
+                    <img src="../img/Ak-47.jpg" alt="Товар 2" class="card__image">
+                    <h3 class="card__title">Ak-47</h3>
+                    <p class="card__price">45.000 руб.</p>
+                </div>
+                
+                <div class="card card--product">
+                    <img src="../img/M4A1.jpg" alt="Товар 3" class="card__image">
+                    <h3 class="card__title">M4A1</h3>
+                    <p class="card__price">35.000 руб.</p>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            © 2025 Портфолио. Все права защищены.
+        </footer>
+    </div>
+    <script src="../src/script.js"></script>
+</body>
+</html>

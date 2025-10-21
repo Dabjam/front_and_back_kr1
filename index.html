@@ -1,70 +1,171 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Семестровая работа</title>
-    <link rel="stylesheet" href="style/style.css">
+    <title>Главная - Портфолио</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./style/style.css">
 </head>
-
-<body data-theme="light">
-    <div class="page">
-        <div class="header">
-            <b>Портфолио</b>
-            <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
-        </div>
-        <nav class="menu">
-            <ul class="menu__list">
-                <li class="menu__item"><a class="menu__link menu__link--active" href="index.html">Главная</a></li>
-                <li class="menu__item"><a class="menu__link" href="pages/news.html">Новости</a></li>
-                <li class="menu__item"><a class="menu__link" href="pages/practices.html">Практики</a></li>
-                <li class="menu__item"><a class="menu__link" href="pages/goods.html">Товары</a></li>
-                <li class="menu__item"><a class="menu__link" href="pages/contacts.html">Контакты</a></li>
-            </ul>
-        </nav>
-        <main class="content">
-            <div class="profile">
-                <h1 class="profile__title">Информация об авторе</h1>
-                <img class="profile__photo" src="./img/photo.png" alt="Фотография">
-                <h2 class="profile__name">Поздышев Эдуард Павлович</h2>
-                <p class="profile__group"><ins>ЭФБО-13-24</ins></p>
-            </div>
-
-            <div class="about">
-                <p>Обо мне: Я родился в Иркутске в 70-м. Глупость рано ударила в голову. В четыре активно ругался. Потом
-                    школа, деньги, драки, клей. Так я становился сильней. Воровал деньги в раздевалке.</p>
-            </div>
-
-            <div class="skills">
-                <div class="skills__tag">HTML</div>
-                <div class="skills__tag">CSS</div>
-                <div class="skills__tag">JavaScript</div>
-                <div class="skills__tag">Git</div>
-            </div>
-
-            <div class="experience-section">
-                <h2 class="section-title">Мой опыт работы</h2>
-                <div class="experience-grid">
-                    <div class="card">
-                        <h3 class="card__title">Такист</h3>
-                        <p class="card__desc">Таксовал для души, а так у меня свой бизнес</p>
+<body data-theme="light" class="bg-light">
+    <div class="container-fluid p-0">
+        <!-- Header -->
+        <header class="text-white py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <h1 class="h3 mb-1">Мой Портфолио</h1>
+                        <p class="mb-0 opacity-75">Студент разработчик</p>
                     </div>
-                    <div class="card card--selected">
-                        <h3 class="card__title">Ворюга</h3>
-                        <p class="card__desc">Воровал продавал и буду воровать</p>
-                    </div>
-                    <div class="card">
-                        <h3 class="card__title">Вайнером</h3>
-                        <p class="card__desc">Снимал вайны</p>
+                    <div class="col-auto">
+                        <span class="badge bg-light text-primary">ЭФБО-13-24</span>
+                        <button class="theme-toggle btn btn-link text-white ms-3" onclick="toggleTheme()">🌙</button>
                     </div>
                 </div>
             </div>
+        </header>
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link active" href="index.html"><i class="bi bi-house me-1"></i>Главная</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pages/news.html"><i class="bi bi-newspaper me-1"></i>Новости</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pages/practices.html"><i class="bi bi-code-slash me-1"></i>Практики</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pages/goods.html"><i class="bi bi-cart me-1"></i>Товары</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pages/contacts.html"><i class="bi bi-telephone me-1"></i>Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Main Content -->
+        <main class="container my-5">
+            <!-- Profile Section -->
+            <section class="mb-5">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <div class="row align-items-center">
+                            <div class="col-md-3 text-center mb-3 mb-md-0">
+                                <img src="img/photo.png" alt="Фото студента" class="img-fluid rounded-circle" style="width: 150px; height: 150px; object-fit: cover;">
+                            </div>
+                            <div class="col-md-9">
+                                <h2 class="card-title h4 text-primary">Поздышев Эдуард Павлович</h2>
+                                <p class="card-text text-muted mb-2"><i class="bi bi-bookmark-check-fill text-primary"></i> Студент группы ЭФБО-13-24</p>
+                                <p class="card-text">Факультет информационных технологий, специальность "Веб-разработка"</p>
+                                <div class="d-flex gap-2 flex-wrap">
+                                    <span class="badge bg-primary">HTML/CSS</span>
+                                    <span class="badge bg-success">JavaScript</span>
+                                    <span class="badge bg-info">Bootstrap</span>
+                                    <span class="badge bg-warning">Git</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- About Section -->
+            <section class="mb-5">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-light">
+                        <h3 class="card-title h5 mb-0"><i class="bi bi-person-circle text-primary"></i> Обо мне</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Я родился в Иркутске в 70-м. Глупость рано ударила в голову. В четыре активно ругался. Потом школа, деньги, драки, клей. Так я становился сильней. Воровал деньги в раздевалке.</p>
+                    </div>
+                </div>
+            </section>
+            <!-- Skills Section -->
+            <section class="mb-5">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-light">
+                        <h3 class="card-title h5 mb-0"><i class="bi bi-tools text-primary"></i> Мои навыки</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between mb-1"><span>HTML/CSS</span><span class="text-primary">90%</span></div>
+                                    <div class="progress" style="height: 8px;"><div class="progress-bar bg-primary" style="width: 90%"></div></div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between mb-1"><span>JavaScript</span><span class="text-primary">75%</span></div>
+                                    <div class="progress" style="height: 8px;"><div class="progress-bar bg-success" style="width: 75%"></div></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between mb-1"><span>Bootstrap</span><span class="text-primary">85%</span></div>
+                                    <div class="progress" style="height: 8px;"><div class="progress-bar bg-info" style="width: 85%"></div></div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between mb-1"><span>Git</span><span class="text-primary">70%</span></div>
+                                    <div class="progress" style="height: 8px;"><div class="progress-bar bg-warning" style="width: 70%"></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Projects Section (опыт как проекты) -->
+            <section class="mb-5">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-light">
+                        <h3 class="card-title h5 mb-0"><i class="bi bi-folder-fill text-primary"></i> Мой опыт работы</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Такист</h5>
+                                        <p class="card-text small text-muted">Таксовал для души, а так у меня свой бизнес</p>
+                                        <div class="mb-2"><span class="badge bg-primary">Навык 1</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card h-100 card--selected">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Ворюга</h5>
+                                        <p class="card-text small text-muted">Воровал продавал и буду воровать</p>
+                                        <div class="mb-2"><span class="badge bg-success">Навык 2</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Вайнером</h5>
+                                        <p class="card-text small text-muted">Снимал вайны</p>
+                                        <div class="mb-2"><span class="badge bg-info">Навык 3</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
-        <footer class="footer">
-            © 2025 Портфолио. Все права защищены.
+        <!-- Footer -->
+        <footer class="text-white py-4 mt-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="mb-0">© 2025 Портфолио. Все права защищены.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="pages/contacts.html" class="text-white text-decoration-none me-3">Контакты</a>
+                        <a href="#" class="text-white text-decoration-none">Политика конфиденциальности</a>
+                    </div>
+                </div>
+            </div>
         </footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="src/script.js"></script>
 </body>
 </html>
